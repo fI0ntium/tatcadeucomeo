@@ -21,7 +21,7 @@ end
 
 local function Hop()
     for _, server in ipairs(GetServers()) do
-        if server.playing < server.maxPlayers then
+        if server.playing <= server.maxPlayers then
             local id = server.id
             if not Visited[id] then
                 Visited[id] = true
